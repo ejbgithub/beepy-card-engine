@@ -1,0 +1,9 @@
+{
+  "$comment": "Root solution file. References each workspace so `tsc --build` typechecks the whole monorepo once dependencies are installed.",
+  "files": [],
+  "references": [
+    { "path": "./shared-engine" },
+    { "path": "./math-cards" },
+    { "path": "./clinical-cards" }
+  ]
+}

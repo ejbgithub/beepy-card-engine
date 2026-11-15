@@ -1,0 +1,12 @@
+{
+  "name": "@beepy/shared-engine",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Subject-neutral card-game engine: players, hands, turn/evaluation lifecycle, challenge validation, penalties, scoring, and history. UI-framework independent. Implements Solitaire and Player vs. Beepy (Tutor deferred).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --build"
+  }
+}

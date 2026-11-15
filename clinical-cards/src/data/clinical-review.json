@@ -1,0 +1,100 @@
+{
+  "reviewFormatVersion": "1.0.0",
+  "reviews": [
+    {
+      "id": "review.approved-sixteen-workup-and-pathology",
+      "reviewedBy": "Earl_Brown",
+      "reviewedOn": "2026-11-14",
+      "statement": "Every correct fact of each topic listed was reviewed against every other topic listed. A fact does not apply to another listed topic unless it is also listed in that topic's corrects.",
+      "topics": [
+        {
+          "topicId": "clinical.topic.hereditary-spherocytosis.workup",
+          "fingerprint": "fp1-aa5b494814c12d2d"
+        },
+        {
+          "topicId": "clinical.topic.glucose-6-phosphate-dehydrogenase-deficiency.workup",
+          "fingerprint": "fp1-a4de0b945c662dda"
+        },
+        {
+          "topicId": "clinical.topic.polycythemia-vera.workup",
+          "fingerprint": "fp1-9519056697bc416c"
+        },
+        {
+          "topicId": "clinical.topic.chronic-myeloid-leukemia.workup",
+          "fingerprint": "fp1-858b579a47c06eef"
+        },
+        {
+          "topicId": "clinical.topic.iron-deficiency-anemia.workup",
+          "fingerprint": "fp1-2dc93548b330bffd"
+        },
+        {
+          "topicId": "clinical.topic.vitamin-b12-deficiency.workup",
+          "fingerprint": "fp1-3d3d0bae6499a3c1"
+        },
+        {
+          "topicId": "clinical.topic.chronic-lymphocytic-leukemia.workup",
+          "fingerprint": "fp1-d2896ca3685ecb5b"
+        },
+        {
+          "topicId": "clinical.topic.acute-promyelocytic-leukemia.workup",
+          "fingerprint": "fp1-ae438d3803ac2996"
+        },
+        {
+          "topicId": "clinical.topic.folate-deficiency.workup",
+          "fingerprint": "fp1-fad4d62e43a9a7b5"
+        },
+        {
+          "topicId": "clinical.topic.sideroblastic-anemia.workup",
+          "fingerprint": "fp1-0e8f2b319ef2002e"
+        },
+        {
+          "topicId": "clinical.topic.leukemoid-reaction.workup",
+          "fingerprint": "fp1-da87dda76fe8c6e2"
+        },
+        {
+          "topicId": "clinical.topic.follicular-lymphoma.workup",
+          "fingerprint": "fp1-cdb4e5329610ac41"
+        },
+        {
+          "topicId": "clinical.topic.anemia-of-chronic-disease.pathology",
+          "fingerprint": "fp1-67b2329829478277"
+        },
+        {
+          "topicId": "clinical.topic.aplastic-anemia.pathology",
+          "fingerprint": "fp1-6a06a405585e1baf"
+        },
+        {
+          "topicId": "clinical.topic.sickle-cell-disease.pathology",
+          "fingerprint": "fp1-59523fc12c8f0dfd"
+        },
+        {
+          "topicId": "clinical.topic.hodgkin-lymphoma.pathology",
+          "fingerprint": "fp1-cf1b3b985d59bb19"
+        }
+      ]
+    },
+    {
+      "id": "review.approved-fourteen-workup",
+      "reviewedBy": "Earl_Brown",
+      "reviewedOn": "2026-11-14",
+      "statement": "Every correct fact of each topic listed was reviewed against every other topic listed. A fact does not apply to another listed topic unless it is also listed in that topic's corrects.",
+      "topics": [
+        { "topicId": "clinical.topic.hereditary-spherocytosis.workup", "fingerprint": "fp1-aa5b494814c12d2d" },
+        { "topicId": "clinical.topic.glucose-6-phosphate-dehydrogenase-deficiency.workup", "fingerprint": "fp1-a4de0b945c662dda" },
+        { "topicId": "clinical.topic.polycythemia-vera.workup", "fingerprint": "fp1-9519056697bc416c" },
+        { "topicId": "clinical.topic.chronic-myeloid-leukemia.workup", "fingerprint": "fp1-858b579a47c06eef" },
+        { "topicId": "clinical.topic.iron-deficiency-anemia.workup", "fingerprint": "fp1-2dc93548b330bffd" },
+        { "topicId": "clinical.topic.vitamin-b12-deficiency.workup", "fingerprint": "fp1-3d3d0bae6499a3c1" },
+        { "topicId": "clinical.topic.chronic-lymphocytic-leukemia.workup", "fingerprint": "fp1-d2896ca3685ecb5b" },
+        { "topicId": "clinical.topic.acute-promyelocytic-leukemia.workup", "fingerprint": "fp1-ae438d3803ac2996" },
+        { "topicId": "clinical.topic.folate-deficiency.workup", "fingerprint": "fp1-fad4d62e43a9a7b5" },
+        { "topicId": "clinical.topic.sideroblastic-anemia.workup", "fingerprint": "fp1-0e8f2b319ef2002e" },
+        { "topicId": "clinical.topic.leukemoid-reaction.workup", "fingerprint": "fp1-da87dda76fe8c6e2" },
+        { "topicId": "clinical.topic.follicular-lymphoma.workup", "fingerprint": "fp1-cdb4e5329610ac41" },
+        { "topicId": "clinical.topic.anemia-of-chronic-disease.workup", "fingerprint": "fp1-e93f7e6bb49a797a" },
+        { "topicId": "clinical.topic.aplastic-anemia.workup", "fingerprint": "fp1-3bf0ea11c46285ec" }
+      ]
+    }
+  ],
+  "alternativeReviews": []
+}

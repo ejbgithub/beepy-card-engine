@@ -1,0 +1,5 @@
+# Placeholder so Git retains this otherwise-empty directory.
+#
+# No hooks exist yet. Per the master spec (§15) and the "record only verified
+# work" steering, we add a functional hook only when there is a real workflow
+# to automate -- not fictitious hooks created merely to list a feature.

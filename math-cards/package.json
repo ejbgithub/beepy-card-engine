@@ -1,0 +1,16 @@
+{
+  "name": "@beepy/math-cards",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Beepy's Math Cards - addition-focused educational card game for second graders. Depends on @beepy/shared-engine. Playable browser app: Solitaire and Player vs. Beepy.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --outDir web-dist --base ./ --emptyOutDir",
+    "preview": "vite preview --outDir web-dist",
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "@beepy/shared-engine": "*"
+  }
+}

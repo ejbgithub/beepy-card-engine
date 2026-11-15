@@ -1,0 +1,36 @@
+{
+  "reviewFormatVersion": "1.0.0",
+  "reviews": [
+    {
+      "id": "review.example-workup-pair",
+      "reviewedBy": "<reviewer name>",
+      "reviewedOn": "YYYY-MM-DD",
+      "statement": "Every correct fact of each topic listed was reviewed against every other topic listed. A fact does not apply to another listed topic unless it is also listed in that topic's corrects.",
+      "topics": [
+        { "topicId": "clinical.topic.example-disease-a.workup", "fingerprint": "fp1-83380b39848dd3d1" },
+        { "topicId": "clinical.topic.example-disease-b.workup", "fingerprint": "fp1-91a57330dfe3102b" }
+      ]
+    },
+    {
+      "id": "review.example-disease-a-workup-management",
+      "reviewedBy": "<reviewer name>",
+      "reviewedOn": "YYYY-MM-DD",
+      "statement": "Every correct fact of each topic listed was reviewed against every other topic listed. A fact does not apply to another listed topic unless it is also listed in that topic's corrects.",
+      "topics": [
+        { "topicId": "clinical.topic.example-disease-a.workup", "fingerprint": "fp1-83380b39848dd3d1" },
+        { "topicId": "clinical.topic.example-disease-a.management", "fingerprint": "fp1-1bc5d54c26942dea" }
+      ]
+    }
+  ],
+  "alternativeReviews": [
+    {
+      "id": "review.alternatives.example-disease-a",
+      "reviewedBy": "<reviewer name>",
+      "reviewedOn": "YYYY-MM-DD",
+      "statement": "Every correct fact of this disease was reviewed against every alternative diagnosis listed in this record. None of those facts applies to any of those alternative diagnoses.",
+      "subjectId": "clinical.subject.example-disease-a",
+      "alternativeIds": ["clinical.answer.example-disease-a.alternative-1"],
+      "fingerprint": "fp1-67c2a8a8d1b8fad9"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "composite": false,
+    "declaration": false,
+    "sourceMap": false,
+    "types": ["vite/client"]
+  },
+  "include": [
+    "shared-engine/src/**/*.ts",
+    "shared-engine/tests/**/*.ts",
+    "math-cards/src/**/*.ts",
+    "math-cards/tests/**/*.ts",
+    "clinical-cards/src/**/*.ts",
+    "clinical-cards/tests/**/*.ts",
+    "clinical-cards/tools/**/*.ts"
+  ]
+}

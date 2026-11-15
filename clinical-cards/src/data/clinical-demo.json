@@ -1,0 +1,900 @@
+{
+  "schemaVersion": "1.0.0",
+  "subjects": [
+    {
+      "id": "clinical.subject.hereditary-spherocytosis",
+      "subject": "Hereditary Spherocytosis",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.hereditary-spherocytosis.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.hereditary-spherocytosis.signs.fact.coombs-negative-hemolytic-anemia-8a2da275",
+              "text": "Coombs-negative hemolytic anemia, jaundice, and splenomegaly"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.hereditary-spherocytosis.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.hereditary-spherocytosis.workup.fact.increased-mchc-2b1f2d55",
+              "text": "increased MCHC"
+            },
+            {
+              "id": "clinical.answer.hereditary-spherocytosis.workup.fact.decreased-eosin-5-maleimide-rbc-staining-5d0cdcf1",
+              "text": "decreased eosin-5-maleimide RBC staining"
+            },
+            {
+              "id": "clinical.answer.hereditary-spherocytosis.workup.fact.increased-osmotic-fragility-test-0993111d",
+              "text": "increased osmotic fragility test"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.hereditary-spherocytosis.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.hereditary-spherocytosis.pathology.fact.genetic-red-blood-cell-membrane-defect-a1c81c18",
+              "text": "genetic red blood cell membrane defect involving spectrin or ankyrin"
+            },
+            {
+              "id": "clinical.answer.hereditary-spherocytosis.pathology.fact.biliary-colic-from-gallstone-obstruction-e5e3eda3",
+              "text": "biliary colic from gallstone obstruction"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.hereditary-spherocytosis.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.hereditary-spherocytosis.management.fact.generally-supportive-in-severe-cases-22f78a57",
+              "text": "generally supportive; in severe cases, splenectomy may be considered"
+            },
+            {
+              "id": "clinical.answer.hereditary-spherocytosis.management.fact.cholecystectomy-in-patients-with-b282e5f5",
+              "text": "cholecystectomy in patients with symptomatic gallstones due to chronic hemolysis"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.glucose-6-phosphate-dehydrogenase-deficiency",
+      "subject": "Glucose-6-Phosphate Dehydrogenase Deficiency",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.glucose-6-phosphate-dehydrogenase-deficiency.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.glucose-6-phosphate-dehydrogenase-deficiency.signs.fact.episodic-hemolysis-in-response-to-8d58761d",
+              "text": "episodic hemolysis in response to oxidants, drugs, infections, or certain foods (eg, fava beans)"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.glucose-6-phosphate-dehydrogenase-deficiency.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.glucose-6-phosphate-dehydrogenase-deficiency.workup.fact.bite-cells-in-the-peripheral-smear-63762c43",
+              "text": "Bite cells in the peripheral smear"
+            },
+            {
+              "id": "clinical.answer.glucose-6-phosphate-dehydrogenase-deficiency.workup.fact.heinz-bodies-in-peripheral-smear-with-e53aefd1",
+              "text": "Heinz bodies in peripheral smear with supravital staining"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.glucose-6-phosphate-dehydrogenase-deficiency.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.glucose-6-phosphate-dehydrogenase-deficiency.pathology.fact.x-linked-disorder-commonly-seen-in-1c5d39f4",
+              "text": "X-linked disorder commonly seen in African American men"
+            },
+            {
+              "id": "clinical.answer.glucose-6-phosphate-dehydrogenase-deficiency.pathology.fact.enzyme-deficiency-results-in-hemoglobin-5a130f65",
+              "text": "enzyme deficiency results in hemoglobin oxidation"
+            },
+            {
+              "id": "clinical.answer.glucose-6-phosphate-dehydrogenase-deficiency.pathology.fact.impaired-nadph-dependent-protection-10ea60ca",
+              "text": "impaired NADPH-dependent protection against oxidative injury"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.glucose-6-phosphate-dehydrogenase-deficiency.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.glucose-6-phosphate-dehydrogenase-deficiency.management.fact.avoid-oxidative-medications-such-as-986ff634",
+              "text": "avoid oxidative medications, such as nitrofurantoin"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.iron-deficiency-anemia",
+      "subject": "Iron Deficiency Anemia",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.iron-deficiency-anemia.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.iron-deficiency-anemia.signs.fact.adult-with-microcytic-anemia-due-to-a820f079",
+              "text": "adult with microcytic anemia due to chronic GI blood loss"
+            },
+            {
+              "id": "clinical.answer.iron-deficiency-anemia.signs.fact.premenopausal-woman-with-anemia-due-to-84dfadd8",
+              "text": "premenopausal woman with anemia due to excessive menstrual bleeding"
+            },
+            {
+              "id": "clinical.answer.iron-deficiency-anemia.signs.fact.adult-with-unusual-appetite-for-ice-f4fc964e",
+              "text": "adult with unusual appetite for ice (pica) or spoon nails (koilonychia)"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.iron-deficiency-anemia.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.iron-deficiency-anemia.workup.fact.microcytic-hypochromic-anemia-with-d8451a4c",
+              "text": "microcytic, hypochromic anemia with reactive thrombocytosis"
+            },
+            {
+              "id": "clinical.answer.iron-deficiency-anemia.workup.fact.low-serum-iron-low-ferritin-elevated-ebe741ce",
+              "text": "low serum iron, low ferritin, elevated TIBC, and low transferrin saturation"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.iron-deficiency-anemia.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.iron-deficiency-anemia.pathology.fact.older-exclusively-breast-fed-infant-dc5ae2af",
+              "text": "older exclusively breast-fed infant without adequate supplemental food"
+            },
+            {
+              "id": "clinical.answer.iron-deficiency-anemia.pathology.fact.infant-who-consumes-large-amounts-of-ace5a8e0",
+              "text": "infant who consumes large amounts of cow's milk prior to 12 months of age"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.iron-deficiency-anemia.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.iron-deficiency-anemia.management.fact.oral-ferrous-sulfate-therapy-d0f08b05",
+              "text": "oral ferrous sulfate therapy"
+            },
+            {
+              "id": "clinical.answer.iron-deficiency-anemia.management.fact.diagnostic-gi-evaluation-including-fc4ee0f0",
+              "text": "diagnostic GI evaluation, including colonoscopy when indicated"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.anemia-of-chronic-disease",
+      "subject": "Anemia of Chronic Disease",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.anemia-of-chronic-disease.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.anemia-of-chronic-disease.signs.fact.adult-with-rheumatoid-arthritis-develops-a7af2934",
+              "text": "adult with rheumatoid arthritis develops moderate anemia due to impaired iron utilization"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.anemia-of-chronic-disease.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.anemia-of-chronic-disease.workup.fact.low-serum-iron-and-tibc-with-5071c157",
+              "text": "low serum iron and TIBC with normal to elevated ferritin"
+            },
+            {
+              "id": "clinical.answer.anemia-of-chronic-disease.workup.fact.increased-iron-stores-within-macrophages-0093689f",
+              "text": "increased iron stores within macrophages on Prussian blue staining of bone marrow"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.anemia-of-chronic-disease.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.anemia-of-chronic-disease.pathology.fact.cytokine-induced-hepcidin-increase-ab59672f",
+              "text": "cytokine-induced hepcidin increase resulting in iron sequestration"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.anemia-of-chronic-disease.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.anemia-of-chronic-disease.management.fact.treat-the-underlying-inflammatory-b491db5d",
+              "text": "treat the underlying inflammatory disorder"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.vitamin-b12-deficiency",
+      "subject": "Vitamin B12 Deficiency",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.vitamin-b12-deficiency.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.vitamin-b12-deficiency.signs.fact.adult-with-megaloblastic-anemia-atrophic-c1db5a13",
+              "text": "adult with megaloblastic anemia, atrophic glossitis, and neurologic findings"
+            },
+            {
+              "id": "clinical.answer.vitamin-b12-deficiency.signs.fact.strict-vegan-who-takes-no-medication-a668381e",
+              "text": "strict vegan who takes no medication other than iron supplementation"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.vitamin-b12-deficiency.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.vitamin-b12-deficiency.workup.fact.elevated-serum-methylmalonic-acid-and-6e1885d6",
+              "text": "elevated serum methylmalonic acid and plasma homocysteine"
+            },
+            {
+              "id": "clinical.answer.vitamin-b12-deficiency.workup.fact.hypersegmented-neutrophils-and-oval-68d28418",
+              "text": "hypersegmented neutrophils and oval macrocytes in peripheral blood"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.vitamin-b12-deficiency.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.vitamin-b12-deficiency.pathology.fact.impaired-dna-synthesis-from-e064d759",
+              "text": "impaired DNA synthesis from cyanocobalamin deficiency"
+            },
+            {
+              "id": "clinical.answer.vitamin-b12-deficiency.pathology.fact.may-result-from-antibody-mediated-180a566c",
+              "text": "may result from antibody-mediated destruction of intrinsic factor and gastric parietal cells"
+            },
+            {
+              "id": "clinical.answer.vitamin-b12-deficiency.pathology.fact.subacute-combined-degeneration-of-the-96c8b285",
+              "text": "subacute combined degeneration of the spinal cord is a complication"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.folate-deficiency",
+      "subject": "Folate Deficiency",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.folate-deficiency.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.folate-deficiency.signs.fact.adult-with-heavy-alcohol-use-d08191c2",
+              "text": "adult with heavy alcohol use, pancytopenia, and significant macrocytosis"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.folate-deficiency.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.folate-deficiency.workup.fact.elevated-plasma-homocysteine-with-normal-2f216393",
+              "text": "elevated plasma homocysteine with normal serum methylmalonic acid"
+            },
+            {
+              "id": "clinical.answer.folate-deficiency.workup.fact.hypersegmented-neutrophils-and-oval-68d28418",
+              "text": "hypersegmented neutrophils and oval macrocytes in peripheral blood"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.folate-deficiency.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.folate-deficiency.pathology.fact.neural-tube-defects-in-newborns-with-c3ee06db",
+              "text": "neural tube defects in newborns with maternal deficiency during early pregnancy"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.aplastic-anemia",
+      "subject": "Aplastic Anemia",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.aplastic-anemia.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.aplastic-anemia.signs.fact.patient-presents-weeks-after-infection-6152efbf",
+              "text": "patient presents weeks after infection with fatigue, pallor, and bleeding manifestations"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.aplastic-anemia.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.aplastic-anemia.workup.fact.pancytopenia-with-reticulocytopenia-and-daeb23d8",
+              "text": "pancytopenia with reticulocytopenia and markedly hypocellular bone marrow containing abundant fat cells"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.aplastic-anemia.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.aplastic-anemia.pathology.fact.direct-toxic-injury-or-cytotoxic-t-357e3681",
+              "text": "direct toxic injury or cytotoxic T-cell destruction of multipotent hematopoietic stem cells"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.sideroblastic-anemia",
+      "subject": "Sideroblastic Anemia",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.sideroblastic-anemia.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.sideroblastic-anemia.signs.fact.patient-taking-isoniazid-for-pulmonary-f4e269a2",
+              "text": "patient taking isoniazid for pulmonary tuberculosis develops anemia"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.sideroblastic-anemia.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.sideroblastic-anemia.workup.fact.dimorphic-rbc-population-in-peripheral-fc1c18d3",
+              "text": "dimorphic RBC population in peripheral smear"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.sideroblastic-anemia.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.sideroblastic-anemia.management.fact.may-respond-to-pyridoxine-therapy-168784c7",
+              "text": "may respond to pyridoxine therapy"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.polycythemia-vera",
+      "subject": "Polycythemia vera",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.polycythemia-vera.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.polycythemia-vera.signs.fact.aquagenic-pruritus-facial-plethora-4b2d8c50",
+              "text": "aquagenic pruritus, facial plethora, transient vision disturbance, and splenomegaly"
+            },
+            {
+              "id": "clinical.answer.polycythemia-vera.signs.fact.erythromelalgia-and-neurologic-symptoms-2f416e3e",
+              "text": "erythromelalgia and neurologic symptoms from hyperviscosity"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.polycythemia-vera.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.polycythemia-vera.workup.fact.increased-red-cell-mass-with-low-22d76f53",
+              "text": "increased red cell mass with low serum erythropoietin levels"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.polycythemia-vera.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.polycythemia-vera.pathology.fact.associated-with-jak2-mutation-0df1bb1d",
+              "text": "associated with JAK2 mutation"
+            },
+            {
+              "id": "clinical.answer.polycythemia-vera.pathology.fact.clonal-mutation-in-a-hematopoietic-stem-7b70fcd7",
+              "text": "clonal mutation in a hematopoietic stem cell"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.polycythemia-vera.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.polycythemia-vera.management.fact.serial-phlebotomy-to-reduce-hematocrit-11c09ddd",
+              "text": "serial phlebotomy to reduce hematocrit and blood viscosity"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.sickle-cell-disease",
+      "subject": "Sickle Cell Disease",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.sickle-cell-disease.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.sickle-cell-disease.signs.fact.child-with-anemia-along-with-a-e06fba39",
+              "text": "child with anemia along with a high reticulocyte count and previous admissions for pain and hematuria"
+            },
+            {
+              "id": "clinical.answer.sickle-cell-disease.signs.fact.child-with-anemia-abdominal-pain-crisis-6ce82dd6",
+              "text": "child with anemia, abdominal pain crisis, and African ancestry"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.sickle-cell-disease.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.sickle-cell-disease.workup.fact.hemoglobin-electrophoresis-f9cced69",
+              "text": "hemoglobin electrophoresis"
+            },
+            {
+              "id": "clinical.answer.sickle-cell-disease.workup.fact.absence-of-normal-beta-globulin-fcae69ca",
+              "text": "absence of normal beta globulin (hemoglobin A)"
+            },
+            {
+              "id": "clinical.answer.sickle-cell-disease.workup.fact.blood-culture-for-child-with-new-57dca294",
+              "text": "blood culture for child with new pulmonary infiltrate with fever or respiratory symptoms"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.sickle-cell-disease.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.sickle-cell-disease.pathology.fact.functional-hyposplenism-at-an-early-age-630fb1e8",
+              "text": "functional hyposplenism at an early age due to splenic autoinfarction"
+            },
+            {
+              "id": "clinical.answer.sickle-cell-disease.pathology.fact.predisposed-to-severe-infections-due-to-19b56cd9",
+              "text": "predisposed to severe infections due to functional asplenia"
+            },
+            {
+              "id": "clinical.answer.sickle-cell-disease.pathology.fact.risk-of-renal-papillary-necrosis-975f0882",
+              "text": "risk of renal papillary necrosis"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.sickle-cell-disease.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.sickle-cell-disease.management.fact.treatment-with-hydroxyurea-to-increase-31246e6a",
+              "text": "treatment with hydroxyurea to increase hemoglobin F"
+            },
+            {
+              "id": "clinical.answer.sickle-cell-disease.management.fact.pneumococcal-vaccination-70a9bdeb",
+              "text": "pneumococcal vaccination"
+            },
+            {
+              "id": "clinical.answer.sickle-cell-disease.management.fact.daily-oral-penicillin-prophylaxis-for-c12d99ea",
+              "text": "daily oral penicillin prophylaxis for child through age five"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.leukemoid-reaction",
+      "subject": "Leukemoid Reaction",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.leukemoid-reaction.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.leukemoid-reaction.signs.fact.patient-with-severe-leukocytosis-with-9e8aca70",
+              "text": "patient with severe leukocytosis with predominantly mature neutrophils and bands in the setting of an acute pulmonary infection"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.leukemoid-reaction.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.leukemoid-reaction.workup.fact.leukocyte-counts-50-000-mm3-along-e32eb2a0",
+              "text": "leukocyte counts >50,000/mm3 along with a high alkaline phosphatase score"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.leukemoid-reaction.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.leukemoid-reaction.pathology.fact.accelerated-release-of-cells-from-the-9eb98e2a",
+              "text": "accelerated release of cells from the bone marrow postmitotic reserve pool"
+            },
+            {
+              "id": "clinical.answer.leukemoid-reaction.pathology.fact.elevated-leukocyte-count-due-to-il-fc823f3d",
+              "text": "elevated leukocyte count due to IL-1 and tumor necrosis factor"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.acute-promyelocytic-leukemia",
+      "subject": "Acute Promyelocytic Leukemia",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.acute-promyelocytic-leukemia.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.acute-promyelocytic-leukemia.signs.fact.adult-with-fatigue-prolonged-bleeding-62fa4dab",
+              "text": "adult with fatigue, prolonged bleeding, and easy bruising along with pancytopenia, coagulopathy, and elevated lactate dehydrogenase"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.acute-promyelocytic-leukemia.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.acute-promyelocytic-leukemia.workup.fact.atypical-promyelocytes-in-the-bone-8f2a5839",
+              "text": "atypical promyelocytes in the bone marrow"
+            },
+            {
+              "id": "clinical.answer.acute-promyelocytic-leukemia.workup.fact.atypical-myeloid-cells-with-numerous-56c8b82e",
+              "text": "atypical myeloid cells with numerous Auer rods on peripheral blood smear"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.acute-promyelocytic-leukemia.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.acute-promyelocytic-leukemia.pathology.fact.extremely-high-risk-for-catastrophic-aa3a8141",
+              "text": "extremely high risk for catastrophic hemorrhage due to tumor-induced consumptive coagulopathy"
+            },
+            {
+              "id": "clinical.answer.acute-promyelocytic-leukemia.pathology.fact.t-15-17-translocation-involving-the-99784c65",
+              "text": "t(15;17) translocation involving the PML–RARα fusion gene"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.acute-promyelocytic-leukemia.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.acute-promyelocytic-leukemia.management.fact.urgent-treatment-with-all-trans-retinoic-e198869d",
+              "text": "urgent treatment with all-trans retinoic acid"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.chronic-myeloid-leukemia",
+      "subject": "Chronic Myeloid Leukemia",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.chronic-myeloid-leukemia.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.chronic-myeloid-leukemia.signs.fact.patient-with-fatigue-weight-loss-marked-5fc825f6",
+              "text": "patient with fatigue, weight loss, marked leukocytosis with granulocytic precursors, splenomegaly, and the Philadelphia chromosome"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.chronic-myeloid-leukemia.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.chronic-myeloid-leukemia.workup.fact.dramatic-leukocytosis-with-absolute-10a8189f",
+              "text": "dramatic leukocytosis with absolute basophilia"
+            },
+            {
+              "id": "clinical.answer.chronic-myeloid-leukemia.workup.fact.decreased-leukocyte-alkaline-phosphatase-634357b9",
+              "text": "decreased leukocyte alkaline phosphatase score"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.chronic-myeloid-leukemia.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.chronic-myeloid-leukemia.pathology.fact.reciprocal-translocation-of-chromosomes-f35d57c9",
+              "text": "reciprocal translocation of chromosomes 9 and 22 forming the BCR-ABL fusion gene"
+            },
+            {
+              "id": "clinical.answer.chronic-myeloid-leukemia.pathology.fact.constitutively-active-tyrosine-kinase-404b623c",
+              "text": "constitutively active tyrosine kinase drives uncontrolled myeloproliferation"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.chronic-myeloid-leukemia.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.chronic-myeloid-leukemia.management.fact.tyrosine-kinase-inhibitors-such-as-59b59be1",
+              "text": "Tyrosine kinase inhibitors such as imatinib"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.chronic-lymphocytic-leukemia",
+      "subject": "Chronic Lymphocytic Leukemia",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.chronic-lymphocytic-leukemia.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.chronic-lymphocytic-leukemia.signs.fact.older-patient-with-marked-lymphocytosis-e9d7cb53",
+              "text": "older patient with marked lymphocytosis combined with hepatosplenomegaly and lymphadenopathy"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.chronic-lymphocytic-leukemia.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.chronic-lymphocytic-leukemia.workup.fact.mature-lymphocytes-and-smudge-cells-in-a719a1a4",
+              "text": "mature lymphocytes and smudge cells in the peripheral smear"
+            },
+            {
+              "id": "clinical.answer.chronic-lymphocytic-leukemia.workup.fact.flow-cytometry-of-the-peripheral-blood-1ad5a29c",
+              "text": "flow cytometry of the peripheral blood showing clonality of mature B cells"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.chronic-lymphocytic-leukemia.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.chronic-lymphocytic-leukemia.pathology.fact.risk-of-infection-due-to-9592c540",
+              "text": "risk of infection due to hypogammaglobulinemia and impaired cellular immunity"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.follicular-lymphoma",
+      "subject": "Follicular Lymphoma",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.follicular-lymphoma.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.follicular-lymphoma.signs.fact.older-patient-with-months-or-years-c121df12",
+              "text": "older patient with months or years of waxing and waning lymphadenopathy"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.follicular-lymphoma.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.follicular-lymphoma.workup.fact.flow-cytometry-showing-a-monoclonal-b-653112a7",
+              "text": "flow cytometry showing a monoclonal B-cell population (CD19+) with CD10 expression and light-chain restriction"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.follicular-lymphoma.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.follicular-lymphoma.pathology.fact.translocation-between-chromosomes-14-and-5cffff0c",
+              "text": "translocation between chromosomes 14 and 18"
+            },
+            {
+              "id": "clinical.answer.follicular-lymphoma.pathology.fact.overexpression-of-bcl-2-94ae18bb",
+              "text": "overexpression of BCL-2"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.hodgkin-lymphoma",
+      "subject": "Hodgkin lymphoma",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.hodgkin-lymphoma.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.hodgkin-lymphoma.signs.fact.young-patient-with-hilar-and-mediastinal-66320351",
+              "text": "young patient with hilar and mediastinal lymphadenopathy and B symptoms (eg, fevers, weight loss)"
+            },
+            {
+              "id": "clinical.answer.hodgkin-lymphoma.signs.fact.patient-with-a-large-anterior-fbfe21d4",
+              "text": "patient with a large anterior mediastinal mass, pruritus, alcohol-associated pain, elevated lactate dehydrogenase, and eosinophilia"
+            },
+            {
+              "id": "clinical.answer.hodgkin-lymphoma.signs.fact.young-woman-has-a-painless-firm-18ad58ed",
+              "text": "young woman has a painless, firm supraclavicular lymph node and splenomegaly"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.hodgkin-lymphoma.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.hodgkin-lymphoma.workup.fact.excisional-lymph-node-biopsy-7e6d7f2c",
+              "text": "excisional lymph node biopsy"
+            },
+            {
+              "id": "clinical.answer.hodgkin-lymphoma.workup.fact.increased-serum-lactate-dehydrogenase-b7ac8ea0",
+              "text": "increased serum lactate dehydrogenase activity"
+            },
+            {
+              "id": "clinical.answer.hodgkin-lymphoma.workup.fact.staging-with-a-pet-scan-bf2190c3",
+              "text": "staging with a PET scan"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.hodgkin-lymphoma.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.hodgkin-lymphoma.pathology.fact.reed-sternberg-cells-are-the-malignant-fb1735ae",
+              "text": "Reed-Sternberg cells are the malignant cells"
+            },
+            {
+              "id": "clinical.answer.hodgkin-lymphoma.pathology.fact.lymphoid-neoplasm-with-peak-incidence-in-d92e455d",
+              "text": "lymphoid neoplasm with peak incidence in early adulthood and in those age >60"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.hodgkin-lymphoma.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.hodgkin-lymphoma.management.fact.often-curable-with-stage-appropriate-9efff85f",
+              "text": "often curable with stage-appropriate systemic therapy, with radiation when indicated"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    }
+  ]
+}

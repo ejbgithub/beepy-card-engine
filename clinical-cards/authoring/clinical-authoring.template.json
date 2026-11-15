@@ -1,0 +1,24 @@
+{
+  "diseases": [
+    {
+      "name": "",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": [],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [],
+        "incorrect": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0.0",
+  "subjects": [
+    {
+      "id": "clinical.subject.example-disease-a",
+      "subject": "Example Disease A",
+      "subjectIncorrects": [
+        {
+          "id": "clinical.answer.example-disease-a.alternative-1",
+          "text": "Example Alternative Diagnosis 1",
+          "explanation": "Replace: why this genuinely different diagnosis is not Example Disease A (optional, may exceed 140 characters)."
+        }
+      ],
+      "topics": [
+        {
+          "id": "clinical.topic.example-disease-a.signs",
+          "topicName": "Classic Signs & Symptoms",
+          "corrects": [
+            {
+              "id": "clinical.answer.example-disease-a.signs.fact-1",
+              "text": "Replace: reviewed classic sign or symptom 1 of Example Disease A",
+              "explanation": "Replace: optional reviewed explanation, shown only after the card is resolved."
+            },
+            {
+              "id": "clinical.answer.example-disease-a.signs.fact-2",
+              "text": "Replace: reviewed classic sign or symptom 2 of Example Disease A"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.example-disease-a.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.example-disease-a.workup.fact-1",
+              "text": "Replace: reviewed work-up finding (lab, procedure or imaging) of Example Disease A"
+            }
+          ],
+          "incorrects": [
+            {
+              "id": "clinical.answer.example-disease-a.workup.not-1",
+              "text": "Replace: reviewed work-up finding that does NOT apply to Example Disease A",
+              "explanation": "Replace: optional reviewed explanation of why it does not apply."
+            }
+          ]
+        },
+        {
+          "id": "clinical.topic.example-disease-a.pathology",
+          "topicName": "Pathology",
+          "corrects": [
+            {
+              "id": "clinical.answer.example-disease-a.pathology.fact-1",
+              "text": "Replace: reviewed cause, mechanism, risk factor, association or complication"
+            }
+          ],
+          "incorrects": []
+        },
+        {
+          "id": "clinical.topic.example-disease-a.management",
+          "topicName": "Management/Treatment",
+          "corrects": [
+            {
+              "id": "clinical.answer.example-disease-a.management.fact-1",
+              "text": "Replace: reviewed treatment, drug complication or contraindication"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    },
+    {
+      "id": "clinical.subject.example-disease-b",
+      "subject": "Example Disease B",
+      "subjectIncorrects": [],
+      "topics": [
+        {
+          "id": "clinical.topic.example-disease-b.workup",
+          "topicName": "Work-up",
+          "corrects": [
+            {
+              "id": "clinical.answer.example-disease-b.workup.fact-1",
+              "text": "Replace: reviewed work-up finding of Example Disease B"
+            }
+          ],
+          "incorrects": []
+        }
+      ]
+    }
+  ]
+}

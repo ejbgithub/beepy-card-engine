@@ -1,0 +1,19 @@
+{
+  "name": "@beepy/clinical-cards",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Beepy's Clinical Cards - disease-based high-yield clinical fact card game for medical students (not NBME-style vignettes), with physician-reviewed content. Depends on @beepy/shared-engine. Playable browser app: Solitaire and Player vs. Beepy, two question styles.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --outDir web-dist --base ./ --emptyOutDir",
+    "preview": "vite preview --outDir web-dist",
+    "typecheck": "tsc --build",
+    "review-report": "vitest run --config tools/vitest.review.config.ts review-report",
+    "convert": "vitest run --config tools/vitest.review.config.ts convert-authoring",
+    "add-disease": "vitest run --config tools/vitest.review.config.ts add-disease"
+  },
+  "dependencies": {
+    "@beepy/shared-engine": "*"
+  }
+}

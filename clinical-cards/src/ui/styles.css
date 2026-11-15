@@ -1,0 +1,1634 @@
+/*
+ * Beepy's Clinical Cards — visual design (M6 C6).
+ * Copied from Beepy's Math Cards (M5, decision C-1 A) so both apps share one look;
+ * the Clinical theme and the wide multi-line card rules are in the section
+ * "M6 C6: Clinical theme" at the end of this file. Rules for features that arrive
+ * in C7 (Beepy bar, pending panel, drag-and-drop) are inherited unused until then.
+ *
+ * Original Math header:
+ * Beepy's Math Cards — visual design (Milestone M5, U5-U6).
+ * Modern and friendly: soft gradients, rounded cards, large numerals.
+ * No retro, pixel-art, or 8-bit styling. System fonts only (nothing downloaded).
+ * Colors are chosen for WCAG AA contrast on their backgrounds; state is never shown
+ * by color alone (icons and words accompany it).
+ */
+
+:root {
+  --ink: #1d2742;
+  --ink-soft: #4a5672;
+  --paper: #ffffff;
+  --sky-1: #eaf2ff;
+  --sky-2: #f7efff;
+  --brand: #4b3fd9;
+  --brand-ink: #ffffff;
+  --brand-soft: #e7e4ff;
+  --accent: #ff8a3d;
+  --good: #1b7a46;
+  --good-soft: #e3f6ea;
+  --oops: #b3342a;
+  --oops-soft: #fde8e5;
+  --info: #1f5fae;
+  --info-soft: #e5effc;
+  --line: #d6dcec;
+  --shadow: 0 6px 18px rgba(29, 39, 66, 0.12);
+  --shadow-lift: 0 14px 28px rgba(29, 39, 66, 0.22);
+  --radius: 16px;
+  --radius-small: 10px;
+  --focus: 0 0 0 4px #ffffff, 0 0 0 7px #4b3fd9;
+  --card-w: 84px;
+  --card-h: 116px;
+  --card-wide-w: 136px;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--ink);
+  background: linear-gradient(160deg, var(--sky-1), var(--sky-2)) fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.app {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 20px 40px;
+}
+
+.screen {
+  animation: fade-in 220ms ease-out;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+button:focus-visible,
+.choice__input:focus-visible + .choice__body {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  min-height: 48px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-weight: 700;
+  transition: transform 120ms ease, background-color 120ms ease;
+}
+
+.btn--primary {
+  background: var(--brand);
+  color: var(--brand-ink);
+  box-shadow: var(--shadow);
+}
+
+.btn--primary:hover {
+  background: #3d32bd;
+}
+
+.btn--ghost {
+  background: var(--paper);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  border-color: var(--brand);
+}
+
+.btn--big {
+  min-height: 60px;
+  padding: 14px 34px;
+  font-size: 1.15rem;
+}
+
+.btn--small {
+  min-height: 44px;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Menu ---------- */
+
+.hero {
+  text-align: center;
+  margin: 40px 0 32px;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  letter-spacing: -0.02em;
+  color: var(--brand);
+}
+
+.hero__subtitle {
+  margin: 8px 0 0;
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+}
+
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.mode-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 30px 24px;
+  border: none;
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.mode-card:not(:disabled):hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+}
+
+.mode-card:disabled {
+  opacity: 0.6;
+}
+
+.mode-card__icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 2rem;
+}
+
+.mode-card__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.mode-card__hint {
+  color: var(--ink-soft);
+}
+
+/* ---------- Setup ---------- */
+
+.screen--setup {
+  max-width: 820px;
+  margin: 20px auto 0;
+}
+
+.setup__title {
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--brand);
+}
+
+.setup__hint {
+  margin: 4px 0 20px;
+  color: var(--ink-soft);
+}
+
+.choice-group {
+  margin: 0 0 22px;
+  padding: 0;
+  border: none;
+}
+
+.choice-group__legend {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.choice {
+  position: relative;
+  display: block;
+}
+
+.choice__input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.choice__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 92px;
+  height: 100%;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  border: 3px solid transparent;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+
+.choice__input:checked + .choice__body {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+}
+
+.choice__input:checked + .choice__body::after {
+  content: '✓';
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.choice__title {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.choice__hint {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.setup__error {
+  padding: 12px 16px;
+  border-radius: var(--radius-small);
+  background: var(--oops-soft);
+  color: var(--oops);
+  font-weight: 700;
+}
+
+.setup__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* ---------- Board ---------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  margin-bottom: 18px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: var(--shadow);
+}
+
+.topbar__brand {
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.topbar__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  flex: 1;
+  justify-content: center;
+}
+
+.stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.stat--game {
+  font-weight: 800;
+}
+
+.stat__label {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.challenges {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.challenge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 150px;
+  padding: 26px 10px 14px;
+  border-radius: var(--radius);
+  border: 3px solid transparent;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: border-color 120ms ease, transform 120ms ease, background-color 120ms ease;
+}
+
+.challenge:disabled {
+  color: var(--ink);
+  opacity: 1;
+}
+
+.challenge__number {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.challenge__prompt {
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.board--solitaire .challenge__prompt {
+  overflow-wrap: anywhere;
+}
+
+.challenge--target {
+  border-color: var(--brand);
+  border-style: dashed;
+  background: #f6f5ff;
+}
+
+.challenge--target:hover {
+  transform: translateY(-3px);
+}
+
+.challenge--solved {
+  background: var(--good-soft);
+  border-color: #9fd8b6;
+}
+
+.challenge__solved {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.challenge__check {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--good);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.mini-card {
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  height: 56px;
+  padding: 0 8px;
+  border-radius: var(--radius-small);
+  background: var(--paper);
+  border: 2px solid var(--line);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.mini-card--wide {
+  min-width: 76px;
+}
+
+.table-center {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 22px 0 14px;
+}
+
+.pile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 132px;
+  min-height: 132px;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 3px solid transparent;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+}
+
+.pile__stack {
+  width: 48px;
+  height: 64px;
+  border-radius: var(--radius-small);
+  background: linear-gradient(135deg, var(--brand), #7a6ff0);
+  box-shadow: 4px 4px 0 #b9b2ff, 8px 8px 0 #dcd8ff;
+}
+
+.pile__empty {
+  width: 48px;
+  height: 64px;
+  border-radius: var(--radius-small);
+  border: 2px dashed var(--line);
+}
+
+.pile__label {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.pile__count {
+  font-size: 1.1rem;
+}
+
+.pile--discard:disabled {
+  color: var(--ink);
+}
+
+.pile--target {
+  border-color: var(--accent);
+  border-style: dashed;
+  background: #fff6ef;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-height: 48px;
+}
+
+.feedback__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  animation: pop-in 200ms ease-out;
+}
+
+.feedback__icon {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.feedback__item--good {
+  background: var(--good-soft);
+  color: var(--good);
+}
+
+.feedback__item--good .feedback__icon {
+  background: var(--good);
+}
+
+.feedback__item--oops,
+.feedback__item--error {
+  background: var(--oops-soft);
+  color: var(--oops);
+}
+
+.feedback__item--oops .feedback__icon,
+.feedback__item--error .feedback__icon {
+  background: var(--oops);
+}
+
+.feedback__item--info {
+  background: var(--info-soft);
+  color: var(--info);
+}
+
+.feedback__item--info .feedback__icon {
+  background: var(--info);
+}
+
+.selection-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 52px;
+  margin: 8px 0;
+  color: var(--ink-soft);
+}
+
+.selection-bar--active {
+  color: var(--ink);
+}
+
+.hand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  padding: 26px 16px 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  width: var(--card-w);
+  height: var(--card-h);
+  padding: 6px;
+  border-radius: var(--radius);
+  border: 3px solid var(--line);
+  background: linear-gradient(180deg, #ffffff, #f4f6fc);
+  box-shadow: var(--shadow);
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+.card--wide {
+  width: var(--card-wide-w);
+}
+
+.card__face {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.card--wide .card__face {
+  font-size: 1.5rem;
+}
+
+.card:not(:disabled):hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lift);
+}
+
+.card--selected {
+  transform: translateY(-14px);
+  border-color: var(--brand);
+  box-shadow: var(--shadow-lift), 0 0 0 4px var(--brand-soft);
+}
+
+.card--selected:not(:disabled):hover {
+  transform: translateY(-14px);
+}
+
+.card--new {
+  animation: new-card 900ms ease-out;
+  border-color: var(--accent);
+}
+
+.card:disabled {
+  opacity: 0.75;
+}
+
+.results {
+  margin: 24px auto 0;
+  max-width: 560px;
+  padding: 26px 28px;
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: var(--shadow-lift);
+  text-align: center;
+  animation: pop-in 240ms ease-out;
+}
+
+.results__title {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  color: var(--brand);
+}
+
+.results__subtitle {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.results__lines,
+.results__games {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.results__lines li,
+.results__games li {
+  padding: 3px 0;
+}
+
+.results__total {
+  font-size: 1.1rem;
+}
+
+.results__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+/* ---------- Player vs. Beepy (U7) ---------- */
+
+.beepy-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  padding: 12px 18px;
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow);
+}
+
+.beepy-bar__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.beepy-bar__name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.beepy-bar__count {
+  color: var(--ink-soft);
+}
+
+.beepy-bar__hand {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.card-back {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 48px;
+  margin-right: -10px;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  background: repeating-linear-gradient(45deg, var(--brand), var(--brand) 6px, #6a5ff0 6px, #6a5ff0 12px);
+  box-shadow: 0 2px 6px rgba(29, 39, 66, 0.18);
+}
+
+.beepy-bar__more {
+  margin-left: 18px;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.beepy-bar__thinking {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.challenges--nine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.challenges--nine .challenge {
+  flex: 0 0 calc((100% - 4 * 12px) / 5);
+  min-height: 132px;
+}
+
+.challenge__solver {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--good);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.challenge--beepy {
+  background: var(--brand-soft);
+  border-color: #b9b2ff;
+}
+
+.challenge--beepy .challenge__check,
+.challenge--beepy .challenge__solver {
+  background: var(--brand);
+}
+
+.pending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 260px;
+  max-width: 420px;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  border: 3px solid var(--brand);
+  background: var(--paper);
+  box-shadow: var(--shadow-lift);
+  text-align: center;
+  animation: pop-in 200ms ease-out;
+}
+
+.pending__title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--brand);
+}
+
+.pending__title:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+  border-radius: 6px;
+}
+
+.pending__move,
+.pending__question {
+  margin: 0;
+}
+
+.pending__question {
+  font-weight: 700;
+}
+
+.mini-card--pending {
+  margin: 0 4px;
+  border-color: var(--brand);
+}
+
+.pending__actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Accept and Challenge look identical, so style never hints at the answer. */
+.btn--decision {
+  min-width: 132px;
+  min-height: 52px;
+  background: var(--brand);
+  color: var(--brand-ink);
+  box-shadow: var(--shadow);
+}
+
+.btn--decision:hover:not(:disabled) {
+  background: #3d32bd;
+}
+
+.results--win {
+  border: 3px solid #9fd8b6;
+}
+
+/* ---------- U9: Beepy artwork ---------- */
+
+.beepy-bar__avatar {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+.beepy {
+  display: block;
+  overflow: visible;
+}
+
+.beepy__figure {
+  transform-origin: 60px 100px;
+}
+
+.beepy--idle .beepy__figure {
+  animation: float 3.2s ease-in-out infinite;
+}
+
+.beepy__thoughts {
+  opacity: 0;
+}
+
+.beepy--thinking .beepy__thoughts {
+  opacity: 1;
+  animation: blink 1s ease-in-out infinite;
+}
+
+.beepy--thinking .beepy__light {
+  animation: blink 0.8s ease-in-out infinite;
+}
+
+.beepy--thinking .beepy__eyes {
+  transform: translateY(-4px);
+}
+
+.hero__beepy {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+/* ---------- U9: target-only problems, instruction, new cards ---------- */
+
+.board-instruction {
+  margin: 0 0 10px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.challenge__prompt--target {
+  font-size: 2.4rem;
+  letter-spacing: -0.02em;
+}
+
+.new-card-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 6px 0 0;
+  font-weight: 700;
+}
+
+.mini-card--new {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px #ffe3cf;
+  animation: pop-in 260ms ease-out;
+}
+
+.card--new::after {
+  content: 'New!';
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.card {
+  position: relative;
+}
+
+/* ---------- U9: wider vs Beepy desktop layout ---------- */
+
+.app:has(.board--vsBeepy) {
+  max-width: 1440px;
+}
+
+.board--vsBeepy .beepy-bar {
+  padding: 6px 18px;
+  margin-bottom: 12px;
+}
+
+.board--vsBeepy .challenge {
+  min-height: 118px;
+}
+
+.action-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Nine problems in one row only where each tile stays readable. */
+@media (min-width: 1280px) {
+  .board--vsBeepy .challenges--nine {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .board--vsBeepy .challenges--nine .challenge {
+    min-height: 120px;
+    padding: 26px 6px 10px;
+  }
+  .board--vsBeepy .challenge__prompt {
+    font-size: 1.25rem;
+  }
+  .board--vsBeepy .challenge__prompt--target {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .action-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 22px;
+    margin: 16px 0 12px;
+  }
+  .action-row .table-center {
+    margin: 0;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .action-row .messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .action-row .feedback {
+    align-items: flex-start;
+    min-height: 0;
+  }
+  .action-row .selection-bar {
+    justify-content: flex-start;
+    min-height: 44px;
+    margin: 0;
+  }
+  .action-row .new-card-notice {
+    justify-content: flex-start;
+  }
+  .board--vsBeepy .pile {
+    width: 118px;
+    min-height: 118px;
+  }
+  .board--vsBeepy .hand {
+    padding: 22px 16px 14px;
+  }
+}
+
+/* ---------- U9 refinement: vs Beepy fits a desktop screen ----------
+ * Owner review (Chrome, ~1830 px wide, 100% zoom): with Beepy's move showing, the
+ * hand fell below the window. Fix by arranging space better, not by shrinking text
+ * or cards: Beepy's move panel becomes horizontal (buttons beside the move), solver
+ * badges sit in the tile corner, and on wide screens the header and Beepy share one
+ * row. Solitaire and narrower screens are unaffected.
+ */
+
+@media (min-width: 1100px) {
+  .action-row .pending {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 22px;
+    row-gap: 4px;
+    align-items: center;
+    justify-items: start;
+    min-width: 0;
+    max-width: none;
+    padding: 12px 20px;
+    text-align: left;
+  }
+  .action-row .pending__title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .action-row .pending__move {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .action-row .pending__question {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .action-row .pending__actions {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .board--vsBeepy .challenge__solver {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .app:has(.board--vsBeepy) {
+    max-width: 1720px;
+  }
+  .screen--board.board--vsBeepy {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      'top beepy'
+      'inst inst'
+      'probs probs'
+      'action action'
+      'hand hand'
+      'results results';
+    gap: 12px;
+  }
+  .board--vsBeepy .topbar {
+    grid-area: top;
+    margin: 0;
+  }
+  .board--vsBeepy .beepy-bar {
+    grid-area: beepy;
+    margin: 0;
+  }
+  .board--vsBeepy .board-instruction {
+    grid-area: inst;
+    margin: 0;
+  }
+  .board--vsBeepy .challenges {
+    grid-area: probs;
+  }
+  .board--vsBeepy .action-row {
+    grid-area: action;
+    margin: 0;
+  }
+  .board--vsBeepy .hand {
+    grid-area: hand;
+  }
+  .board--vsBeepy .results {
+    grid-area: results;
+    margin: 0 auto;
+  }
+}
+
+/* ---------- U10: drag-and-drop ---------- */
+
+.card {
+  /* Horizontal swipes still scroll a long hand; other moves can drag the card. */
+  touch-action: pan-x;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.drag-ghost {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  width: var(--card-w);
+  height: var(--card-h);
+  border-radius: var(--radius);
+  border: 3px solid var(--brand);
+  background: linear-gradient(180deg, #ffffff, #f4f6fc);
+  box-shadow: var(--shadow-lift);
+  font-size: 2rem;
+  font-weight: 800;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.drag-ghost--wide {
+  width: var(--card-wide-w);
+  font-size: 1.5rem;
+}
+
+/* While dragging, every target stays equally lit (no hint about the answer);
+   only the one under the pointer gets a stronger outline. */
+.is-dragging .challenge--target,
+.is-dragging .pile--target {
+  border-style: dashed;
+}
+
+.challenge--target.drop-hover,
+.pile--target.drop-hover {
+  border-style: solid;
+  border-width: 4px;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-lift);
+}
+
+.is-dragging,
+.is-dragging * {
+  cursor: grabbing;
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes new-card {
+  0% { transform: translateY(-30px); opacity: 0.2; }
+  60% { transform: translateY(4px); opacity: 1; }
+  100% { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .card--selected,
+  .card:not(:disabled):hover,
+  .mode-card:not(:disabled):hover,
+  .challenge--target:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 17px;
+    --card-w: 76px;
+    --card-h: 104px;
+    --card-wide-w: 124px;
+  }
+  .challenge {
+    min-height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 12px 12px 28px;
+  }
+  .topbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .topbar__stats {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: flex-start;
+  }
+  .challenges {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .challenge {
+    min-height: 112px;
+    padding: 26px 6px 10px;
+  }
+  .challenge__prompt {
+    font-size: 1.15rem;
+  }
+  .challenges--nine .challenge {
+    flex-basis: calc((100% - 2 * 12px) / 3);
+    min-height: 112px;
+  }
+  .table-center {
+    flex-wrap: wrap;
+  }
+  .pending {
+    flex-basis: 100%;
+    max-width: none;
+  }
+  .table-center {
+    gap: 14px;
+  }
+  .pile {
+    width: 112px;
+    min-height: 112px;
+  }
+  .hand {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 24px 12px 14px;
+  }
+  .card {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+  .setup__actions {
+    flex-direction: column-reverse;
+  }
+}
+
+/* ---------- M6 C6: Clinical theme ---------- */
+/*
+ * Same layout and components as Math; a calmer teal palette, and cards sized for
+ * clinical text: wide, multi-line, up to 140 characters (C-12), never truncated on a
+ * hand card. Colors keep WCAG AA contrast; state still has icons and words.
+ */
+
+:root {
+  --sky-1: #e8f6f4;
+  --sky-2: #eef2fb;
+  --brand: #0f6b6b;
+  --brand-soft: #d9efed;
+  --accent: #e07a2f;
+  --focus: 0 0 0 4px #ffffff, 0 0 0 7px #0f6b6b;
+  --card-text-w: 230px;
+  --card-text-min-h: 148px;
+}
+
+.btn--primary:hover {
+  background: #0b5555;
+}
+
+.challenge--target {
+  background: #f1faf9;
+}
+
+.disclaimer {
+  margin: 24px auto 0;
+  max-width: 640px;
+  padding: 10px 16px;
+  border-radius: var(--radius-small);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Challenges: category on its own small line, then the disease or fact. */
+.challenges--clinical .challenge {
+  justify-content: flex-start;
+  min-height: 170px;
+  padding: 36px 12px 14px;
+}
+
+.challenges--clinical .challenge__prompt {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.challenge__category {
+  align-self: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.challenge__prompt--diseaseCategory .challenge__heading {
+  order: -1;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.challenge__prompt--categoryFact .challenge__heading {
+  font-weight: 600;
+}
+
+/* Hand cards: wide and multi-line. */
+.hand--clinical {
+  align-items: stretch;
+}
+
+.card--text {
+  width: var(--card-text-w);
+  height: auto;
+  min-height: var(--card-text-min-h);
+  padding: 14px 14px;
+  place-items: center;
+  text-align: center;
+}
+
+.card--text .card__face {
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.32;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* Small copies (discard top, solved tile, new-card notice): wrap, at most four lines. */
+.mini-card--text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+  max-width: 200px;
+  height: auto;
+  min-height: 56px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  font-weight: 650;
+  line-height: 1.3;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.pile--discard .mini-card--text {
+  max-width: 132px;
+  font-size: 0.72rem;
+}
+
+.challenge__solved {
+  flex-direction: column;
+}
+
+/* Data error screen. */
+.data-error {
+  max-width: 560px;
+  margin: 24px auto 0;
+  padding: 22px 24px;
+  border-radius: var(--radius);
+  border: 2px solid #f1c3bd;
+  background: var(--oops-soft);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.data-error__title {
+  margin: 0 0 8px;
+  color: var(--oops);
+  font-size: 1.3rem;
+}
+
+.data-error__message {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.data-error__hint {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --card-text-w: 200px;
+    --card-text-min-h: 136px;
+  }
+}
+
+@media (max-width: 768px) {
+  .challenges.challenges--clinical {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .challenges--clinical .challenge {
+    min-height: 140px;
+  }
+  :root {
+    --card-text-w: 72vw;
+  }
+}
+
+/* ---------- M6 C7: Player vs. Beepy, Explain Why, drag-and-drop (Clinical) ---------- */
+/*
+ * Nine challenges as 5 + 4 on desktop (design section 8), never one row of nine:
+ * clinical prompts need the width. 3 columns on tablets, 2 on phones.
+ */
+
+.board--clinical.board--vsBeepy .challenges--nine {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.board--clinical.board--vsBeepy .challenges--nine .challenge {
+  min-height: 150px;
+  padding: 34px 10px 12px;
+}
+
+.board--clinical.board--vsBeepy .challenge__prompt {
+  font-size: 0.95rem;
+}
+
+.board--clinical.board--vsBeepy .challenge__prompt--diseaseCategory .challenge__heading {
+  font-size: 1.05rem;
+}
+
+.board--clinical .challenge__solver {
+  top: 8px;
+  right: 10px;
+}
+
+.board--clinical .pending__move {
+  line-height: 1.5;
+}
+
+.board--clinical .mini-card--pending.mini-card--text {
+  display: inline-block;
+  max-width: 260px;
+  vertical-align: middle;
+  -webkit-line-clamp: unset;
+  line-clamp: none;
+  overflow: visible;
+}
+
+/* Explain Why: a separate panel, never on a card face. */
+.explain {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+}
+
+.explain--open {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 640px;
+  margin: 8px auto;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  border: 2px solid var(--brand-soft);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.explain__title {
+  margin: 0;
+  color: var(--brand);
+  font-size: 1rem;
+}
+
+.explain__text {
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Drag ghost for multi-line clinical cards. */
+.board--clinical ~ .drag-ghost,
+.drag-ghost--wide {
+  width: var(--card-text-w);
+  height: auto;
+  min-height: 90px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  font-weight: 650;
+  line-height: 1.3;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1099px) {
+  .board--clinical.board--vsBeepy .challenges--nine {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .board--clinical.board--vsBeepy .challenges--nine {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---------- M6 C8: responsive fixes found by in-browser measurement ---------- */
+/*
+ * A. Desktop (>= 1100 px), Player vs. Beepy: the inherited Math row places the piles
+ *    plus Beepy's move panel beside the messages, and the panel's text column is
+ *    sized to its content. A long clinical card and destination made the row wider
+ *    than the screen. For Clinical, the messages sit under the piles, the panel's
+ *    text column may shrink and wrap, and the piles row wraps.
+ * B. Phones (<= 480 px): Beepy's face-down cards overlap more and the row clips, so
+ *    it never widens the page. The count stays in visible text and in the label.
+ */
+
+@media (min-width: 1100px) {
+  .board--clinical .action-row {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+  .board--clinical .action-row .table-center {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .board--clinical .action-row .pending {
+    grid-template-columns: minmax(0, 1fr) auto;
+    max-width: min(760px, 100%);
+  }
+  .board--clinical .action-row .messages {
+    align-items: center;
+    width: 100%;
+  }
+  .board--clinical .action-row .feedback,
+  .board--clinical .action-row .selection-bar,
+  .board--clinical .action-row .new-card-notice {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.board--clinical .pending {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.board--clinical .mini-card--pending.mini-card--text {
+  max-width: min(260px, 100%);
+}
+
+@media (max-width: 480px) {
+  .board--clinical .beepy-bar__hand {
+    overflow: hidden;
+  }
+  .board--clinical .card-back {
+    width: 26px;
+    height: 38px;
+    margin-right: -14px;
+  }
+}
+
+/*
+ * C. Small card copies (found in a C8 screenshot): with vertical padding, a 4-line
+ *    clamp let half of a fifth line show. Solved tiles and the new-card notice now
+ *    show the full text (it fits when wrapped). Only the discard pile's top copy is
+ *    clamped, to three whole lines with no vertical padding; its full text is in the
+ *    pile's accessible name.
+ */
+.challenge__solved .mini-card--text,
+.new-card-notice .mini-card--text {
+  display: inline-block;
+  -webkit-line-clamp: unset;
+  line-clamp: none;
+  overflow: visible;
+  max-width: min(220px, 100%);
+}
+
+.pile--discard .mini-card--text {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  min-height: 0;
+  max-height: calc(1.3em * 3);
+  padding-top: 0;
+  padding-bottom: 0;
+  border-width: 0 0 0 0;
+  box-shadow: 0 0 0 4px var(--paper), 0 0 0 6px var(--line);
+}

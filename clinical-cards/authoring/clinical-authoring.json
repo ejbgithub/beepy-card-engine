@@ -1,0 +1,441 @@
+{
+  "diseases": [
+    {
+      "name": "Hereditary Spherocytosis",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": [
+          "Coombs-negative hemolytic anemia, jaundice, and splenomegaly"
+        ],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "increased MCHC",
+          "decreased eosin-5-maleimide RBC staining",
+          "increased osmotic fragility test"
+        ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "genetic red blood cell membrane defect involving spectrin or ankyrin",
+          "biliary colic from gallstone obstruction"
+        ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [
+          "generally supportive; in severe cases, splenectomy may be considered",
+          "cholecystectomy in patients with symptomatic gallstones due to chronic hemolysis"
+        ],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Glucose-6-Phosphate Dehydrogenase Deficiency",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": [
+          "episodic hemolysis in response to oxidants, drugs, infections, or certain foods (eg, fava beans)"
+        ],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "Bite cells in the peripheral smear",
+          "Heinz bodies in peripheral smear with supravital staining"
+        ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "X-linked disorder commonly seen in African American men",
+          "enzyme deficiency results in hemoglobin oxidation",
+          "impaired NADPH-dependent protection against oxidative injury"
+        ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": ["avoid oxidative medications, such as nitrofurantoin"],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Iron Deficiency Anemia",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": [
+          "adult with microcytic anemia due to chronic GI blood loss",
+          "premenopausal woman with anemia due to excessive menstrual bleeding",
+          "adult with unusual appetite for ice (pica) or spoon nails (koilonychia)"
+        ],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "microcytic, hypochromic anemia with reactive thrombocytosis",
+          "low serum iron, low ferritin, elevated TIBC, and low transferrin saturation"
+        ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "older exclusively breast-fed infant without adequate supplemental food",
+          "infant who consumes large amounts of cow's milk prior to 12 months of age"
+        ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [
+          "oral ferrous sulfate therapy",
+          "diagnostic GI evaluation, including colonoscopy when indicated"
+        ],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Anemia of Chronic Disease",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": [
+          "adult with rheumatoid arthritis develops moderate anemia due to impaired iron utilization"
+        ],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "low serum iron and TIBC with normal to elevated ferritin",
+          "increased iron stores within macrophages on Prussian blue staining of bone marrow"
+        ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "cytokine-induced hepcidin increase resulting in iron sequestration"
+        ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [
+          "treat the underlying inflammatory disorder"
+        ],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Vitamin B12 Deficiency",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": [
+          "adult with megaloblastic anemia, atrophic glossitis, and neurologic findings",
+          "strict vegan who takes no medication other than iron supplementation"
+        ],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "elevated serum methylmalonic acid and plasma homocysteine",
+          "hypersegmented neutrophils and oval macrocytes in peripheral blood"
+        ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "impaired DNA synthesis from cyanocobalamin deficiency",
+          "may result from antibody-mediated destruction of intrinsic factor and gastric parietal cells",
+          "subacute combined degeneration of the spinal cord is a complication"
+        ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Folate Deficiency",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": [
+          "adult with heavy alcohol use, pancytopenia, and significant macrocytosis"
+        ],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "elevated plasma homocysteine with normal serum methylmalonic acid",
+          "hypersegmented neutrophils and oval macrocytes in peripheral blood"
+        ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "neural tube defects in newborns with maternal deficiency during early pregnancy"
+        ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Aplastic Anemia",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": ["patient presents weeks after infection with fatigue, pallor, and bleeding manifestations"],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "pancytopenia with reticulocytopenia and markedly hypocellular bone marrow containing abundant fat cells"
+        ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": ["direct toxic injury or cytotoxic T-cell destruction of multipotent hematopoietic stem cells"],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Sideroblastic Anemia",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": ["patient taking isoniazid for pulmonary tuberculosis develops anemia"],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": ["dimorphic RBC population in peripheral smear"],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [],
+        "incorrect": []
+      },
+      "management": {
+        "correct": ["may respond to pyridoxine therapy"],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Polycythemia vera",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": [
+          "aquagenic pruritus, facial plethora, transient vision disturbance, and splenomegaly",
+          "erythromelalgia and neurologic symptoms from hyperviscosity"
+      ],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": ["increased red cell mass with low serum erythropoietin levels"],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "associated with JAK2 mutation",
+          "clonal mutation in a hematopoietic stem cell"
+      ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": ["serial phlebotomy to reduce hematocrit and blood viscosity"],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Sickle Cell Disease",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": [
+          "child with anemia along with a high reticulocyte count and previous admissions for pain and hematuria",
+          "child with anemia, abdominal pain crisis, and African ancestry"
+      ],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "hemoglobin electrophoresis",
+          "absence of normal beta globulin (hemoglobin A)",
+          "blood culture for child with new pulmonary infiltrate with fever or respiratory symptoms"
+        ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "functional hyposplenism at an early age due to splenic autoinfarction",
+          "predisposed to severe infections due to functional asplenia",
+          "risk of renal papillary necrosis"
+      ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [
+          "treatment with hydroxyurea to increase hemoglobin F",
+          "pneumococcal vaccination",
+          "daily oral penicillin prophylaxis for child through age five"
+        ],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Leukemoid Reaction",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": ["patient with severe leukocytosis with predominantly mature neutrophils and bands in the setting of an acute pulmonary infection"],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": ["leukocyte counts >50,000/mm3 along with a high alkaline phosphatase score"],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "accelerated release of cells from the bone marrow postmitotic reserve pool",
+          "elevated leukocyte count due to IL-1 and tumor necrosis factor"
+      ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Acute Promyelocytic Leukemia",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": ["adult with fatigue, prolonged bleeding, and easy bruising along with pancytopenia, coagulopathy, and elevated lactate dehydrogenase"],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "atypical promyelocytes in the bone marrow",
+          "atypical myeloid cells with numerous Auer rods on peripheral blood smear"
+        ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "extremely high risk for catastrophic hemorrhage due to tumor-induced consumptive coagulopathy",
+          "t(15;17) translocation involving the PML–RARα fusion gene"
+      ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": ["urgent treatment with all-trans retinoic acid"],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Chronic Myeloid Leukemia",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": ["patient with fatigue, weight loss, marked leukocytosis with granulocytic precursors, splenomegaly, and the Philadelphia chromosome"],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "dramatic leukocytosis with absolute basophilia",
+          "decreased leukocyte alkaline phosphatase score"
+        ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "reciprocal translocation of chromosomes 9 and 22 forming the BCR-ABL fusion gene",
+          "constitutively active tyrosine kinase drives uncontrolled myeloproliferation"
+        ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": ["Tyrosine kinase inhibitors such as imatinib"],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Chronic Lymphocytic Leukemia",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": ["older patient with marked lymphocytosis combined with hepatosplenomegaly and lymphadenopathy"],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "mature lymphocytes and smudge cells in the peripheral smear",
+          "flow cytometry of the peripheral blood showing clonality of mature B cells"
+      ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": ["risk of infection due to hypogammaglobulinemia and impaired cellular immunity"],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Follicular Lymphoma",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": ["older patient with months or years of waxing and waning lymphadenopathy"],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": ["flow cytometry showing a monoclonal B-cell population (CD19+) with CD10 expression and light-chain restriction"],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "translocation between chromosomes 14 and 18",
+          "overexpression of BCL-2"
+        ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [],
+        "incorrect": []
+      }
+    },
+    {
+      "name": "Hodgkin lymphoma",
+      "alternativeDiagnoses": [],
+      "signs": {
+        "correct": [
+          "young patient with hilar and mediastinal lymphadenopathy and B symptoms (eg, fevers, weight loss)",
+          "patient with a large anterior mediastinal mass, pruritus, alcohol-associated pain, elevated lactate dehydrogenase, and eosinophilia",
+          "young woman has a painless, firm supraclavicular lymph node and splenomegaly"
+      ],
+        "incorrect": []
+      },
+      "workup": {
+        "correct": [
+          "excisional lymph node biopsy",
+          "increased serum lactate dehydrogenase activity",
+          "staging with a PET scan"
+      ],
+        "incorrect": []
+      },
+      "pathology": {
+        "correct": [
+          "Reed-Sternberg cells are the malignant cells",
+          "lymphoid neoplasm with peak incidence in early adulthood and in those age >60"
+      ],
+        "incorrect": []
+      },
+      "management": {
+        "correct": [
+          "often curable with stage-appropriate systemic therapy, with radiation when indicated"
+      ],
+        "incorrect": []
+      }
+    }
+  ]
+}
