@@ -1,182 +1,271 @@
-# Beepy Educational Card Game Engine
+# Beepy Card Engine
 
-A browser-based, subject-neutral **educational card-game engine** built for
-**Kiroween 2026** (Skeleton Crew category) with the Kiro IDE. One engine powers
-two separate games:
+A browser-based, subject-neutral **educational card-game engine** developed for **Kiroween 2026** in the **Skeleton Crew** category using the Kiro IDE.
 
-- **Beepy's Math Cards** (`math-cards/`): an addition card game for second
-  graders.
-- **Beepy's Clinical Cards** (`clinical-cards/`): a disease-based, high-yield
-  clinical fact game for medical students, with physician-authored and reviewed
-  content. It is not an NBME-style question bank.
+**One shared engine powers two educational applications:**
 
-Both apps offer Solitaire and Player vs. Beepy. "Beepy" is the recurring
-character and computer opponent.
+- **Beepy's Math Cards** (`math-cards/`): An addition card game designed for second-grade students.
+- **Beepy's Clinical Cards** (`clinical-cards/`): A disease-based, high-yield clinical fact game for medical students, with physician-authored and reviewed content. It is not an NBME-style question bank.
 
-## Status (end of Milestone M6, 2026-11-14)
+Both applications offer **Solitaire** and **Player vs. Beepy** modes. Beepy is the recurring character and computer opponent.
+
+## Play the Games
+
+Both applications are publicly deployed and can be played directly in a web browser without registration or installation.
+
+**Beepy's Math Cards:**  
+https://beepy-math-cards.netlify.app/
+
+**Beepy's Clinical Cards:**  
+https://beepy-clinical-cards.netlify.app/
+
+**Kiroween 2026 demonstration video:**  
+https://youtu.be/3QzE9GrPU84
+
+## Project Status (November 15, 2026)
 
 | Part | Status |
 |---|---|
 | Shared engine (`shared-engine/`) | Implemented and tested: Solitaire and Player vs. Beepy |
-| Math Cards (`math-cards/`) | Generator and browser app implemented, tested, owner-accepted in Chrome (M4–M5) |
-| Clinical Cards (`clinical-cards/`) | Content tooling, generator, fallback, series and browser app implemented, tested, owner-accepted in Chrome (M6) |
+| Math Cards (`math-cards/`) | Generator and browser application implemented, tested, and owner-accepted in Chrome (M4–M5) |
+| Clinical Cards (`clinical-cards/`) | Content tooling, generator, fallback, series, and browser application implemented, tested, and owner-accepted in Chrome (M6) |
 | Clinical content | 16 hematology diseases, 96 correct facts, 2 current physician review records |
-| Tutor Mode, Player vs. Player | Not implemented |
-| Hosting / deployment | Not done |
+| Automated testing | 2,390 passing tests in the final M6 verification |
+| Hosting / deployment | Both applications publicly deployed on Netlify |
+| Tutor Mode / Player vs. Player | Not implemented; potential future enhancements |
 
-## How it fits together
+## How It Fits Together
 
 ```text
 beepy-card-engine/
   .kiro/
-    specs/         # Kiro specs per milestone (requirements, design, tasks)
-    steering/      # architecture and policy guidance used by Kiro
-    hooks/         # none created (placeholder only)
-  shared-engine/   # subject-neutral engine: schema, validation, game rules, controller
-  math-cards/      # Math deck generator + the Beepy's Math Cards browser app
-  clinical-cards/  # clinical content tooling, generator, review policy + the Clinical Cards app
+    specs/          # Kiro specifications (requirements, design, tasks)
+    steering/       # Architecture and policy guidance used by Kiro
+    hooks/          # No hooks created (placeholder only)
+  shared-engine/    # Subject-neutral engine: schema, validation, rules, controller
+  math-cards/       # Math deck generator and browser application
+  clinical-cards/   # Clinical content tools, generator, review policy, and app
   docs/
-    master-spec-v1.1.md        # authoritative specification
-    kiro-development-log.md    # chronological, evidence-based development journal
-    devpost-submission.md      # reusable, factual submission summary
-  README.md, LICENSE (MIT)
+    master-spec-v1.1.md       # Authoritative specification
+    kiro-development-log.md   # Chronological development evidence
+    devpost-submission.md     # Reusable submission summary
+  README.md
+  LICENSE           # MIT License
 ```
 
-- **Educational data → generator → validated deck → engine → sanitized view → UI.**
-  - App-specific generators turn subject content into a validated deck plus a
-    complete "which card answers which challenge" matrix.
-  - The engine checks every deck again, then deals, judges, applies penalties,
-    and decides winners.
-- **The engine is subject-neutral.** It knows nothing about math or medicine.
-  Both apps use it unchanged.
-- **The UI never sees the answer key.** It talks to a trusted series layer that
-  returns only sanitized views and public events.
-- **Deterministic:** the same seed and the same moves replay the same game.
+**Educational data → generator → validated deck → engine → sanitized view → UI**
 
-Each package has its own README:
-[`shared-engine/`](shared-engine/README.md),
-[`math-cards/`](math-cards/README.md),
-[`clinical-cards/`](clinical-cards/README.md).
+- App-specific generators turn educational content into validated decks and complete answer-relationship matrices.
+- The shared engine validates decks, manages turns, judges moves, applies penalties, and determines winners.
+- The engine is subject-neutral: it contains no mathematics-specific or medicine-specific rules.
+- The normal UI does not receive the answer key. It communicates with a series layer that provides sanitized views and public events.
+- Given the same seed and moves, the engine supports deterministic gameplay replay.
 
-## Beepy's Math Cards in brief
+Each package has its own documentation:
 
-- **Modes:** Solitaire (five problems, five-game session, score = turns + cards
-  left) and Player vs. Beepy (nine shared problems, Accept/Challenge on Beepy's
-  moves, best of five).
-- **Levels:** Small numbers, Small + big numbers, Big numbers, and Mix it up.
-  Sums never exceed 99.
-- **Question styles:** "Solve the problem" (`3 + 4 = ?` → `7`) and "Find the
-  matching addition" (`7` → `3 + 4`).
+- [Shared engine](shared-engine/README.md)
+- [Math Cards](math-cards/README.md)
+- [Clinical Cards](clinical-cards/README.md)
 
-Full rules: [`math-cards/README.md`](math-cards/README.md).
+## Beepy's Math Cards
 
-## Beepy's Clinical Cards in brief
+Math Cards helps second-grade students practice addition through interactive card-game mechanics.
 
-- **Question styles:** "Disease + category → fact" and "Fact → disease". The
-  categories are Classic Signs & Symptoms, Work-up, Pathology and
-  Management/Treatment.
-- **Modes:** the same Solitaire and Player vs. Beepy rules as Math, with nine
-  shared challenges in a responsive grid.
-- **Correctness:** a card counts as wrong only when the data or a physician
-  review says so. Unreviewed relationships are never used as wrong answers, and
-  stale reviews are excluded automatically. Decks shrink rather than pad when
-  reviewed content is limited.
-- **Explain Why:** shows an authored explanation after a resolved play. The
-  current dataset has none, so the button does not appear yet.
-- A disclaimer is shown: "For study practice only. Not medical advice."
+**Gameplay modes:**
 
-Details: [`clinical-cards/README.md`](clinical-cards/README.md).
+- **Solitaire:** Five addition problems per round, with scoring based on turns taken and cards remaining.
+- **Player vs. Beepy:** Nine shared problems, Accept/Challenge decisions on Beepy's moves, and best-of-five competitive matches.
+
+**Difficulty levels:**
+
+- Small numbers
+- Small + big numbers
+- Big numbers
+- Mix it up
+
+Sums do not exceed 99.
+
+**Question styles:**
+
+- Solve the problem: `3 + 4 = ?` → `7`
+- Find the matching addition: `7` → `3 + 4`
+
+Play online: https://beepy-math-cards.netlify.app/
+
+Full documentation: [math-cards/README.md](math-cards/README.md).
+
+## Beepy's Clinical Cards
+
+Clinical Cards helps medical students reinforce high-yield associations between diseases and clinical facts.
+
+The initial dataset contains **16 hematologic disorders and 96 correct clinical facts**, with physician-authored and reviewed educational content.
+
+**Question styles:**
+
+- Disease + category → clinical fact
+- Clinical fact → disease
+
+The four educational categories are:
+
+1. Classic Signs & Symptoms
+2. Work-up
+3. Pathology
+4. Management/Treatment
+
+**Gameplay modes:**
+
+- Solitaire
+- Player vs. Beepy, including nine shared challenges in a responsive grid
+
+The underlying game mechanics are shared with Math Cards.
+
+**Content correctness and review:**
+
+- A card is treated as an incorrect answer only when supported by the content data or a physician review.
+- Unreviewed relationships are never used as incorrect answers.
+- Stale reviews are automatically excluded.
+- Generated decks shrink rather than introduce unsupported incorrect relationships when reviewed content is limited.
+
+**Explain Why:** The engine supports authored explanations after resolved plays. The current dataset does not include explanations, so this feature is not displayed in the deployed application.
+
+The application displays the disclaimer:
+
+*For study practice only. Not medical advice.*
+
+Play online: https://beepy-clinical-cards.netlify.app/
+
+Full documentation: [clinical-cards/README.md](clinical-cards/README.md).
+
+## How Kiro Was Used
+
+Kiro was used as the primary AI-assisted development environment for implementing the shared engine and both educational applications.
+
+The project followed a specification-driven development process, with detailed gameplay requirements translated into implementation specifications, code, and automated tests.
+
+**Kiro features used:**
+
+- **Kiro IDE:** AI-assisted implementation, debugging, refinement, and testing.
+- **Kiro Specs:** Six development specifications documenting requirements, design decisions, and implementation tasks.
+- **Kiro Steering:** Persistent architecture and policy instructions to maintain consistency across the shared engine and applications.
+
+**Kiro hooks were not implemented.** The `.kiro/hooks/` directory contains only a placeholder. No claims are made that hooks were used in the completed development workflow.
+
+The project includes a chronological development journal documenting milestones, Kiro-assisted work, tests, problems encountered, and resolutions.
+
+Development evidence: [docs/kiro-development-log.md](docs/kiro-development-log.md).
 
 ## Development
 
-Requirements: Node.js 20 or newer and npm.
+**Requirements:** Node.js 20 or newer and npm.
 
 ```bash
-npm install                         # install dev dependencies (once)
-npm run dev -w math-cards           # Math Cards dev server: http://localhost:5173/
-npm run build -w math-cards         # static build -> math-cards/web-dist/
-npm run build -w clinical-cards     # static build -> clinical-cards/web-dist/
-npm run preview -w clinical-cards   # serve the Clinical build
+npm install
+npm run dev -w math-cards
+npm run build -w math-cards
+npm run build -w clinical-cards
+npm run preview -w clinical-cards
 
-npx tsc --build tsconfig.json       # type-check all workspaces
-npm run typecheck:tests             # type-check the test files
-npm test                            # run every Vitest suite once
+npx tsc --build tsconfig.json
+npm run typecheck:tests
+npm test
 npx eslint shared-engine math-cards clinical-cards
 ```
 
-For Clinical development, run `npx vite` from `clinical-cards/`. The Clinical
-authoring commands are in [`clinical-cards/README.md`](clinical-cards/README.md).
+The Math Cards development server runs at `http://localhost:5173/` by default.
 
-**Lint status:** all code written in M3–M6 lints clean. The full command above
-reports **2 pre-existing errors in M2 files** (`shared-engine/src/issues.ts`: an
-unused compile-time check type; `shared-engine/src/penalty-draw.ts`: a
-line-break style rule). Both are style issues with no behavior impact, left
-unchanged pending an owner decision.
+Static builds are generated in:
 
-**Static hosting:** both `web-dist/` folders use relative asset paths and need
-no server code. Nothing has been deployed yet.
+- `math-cards/web-dist/`
+- `clinical-cards/web-dist/`
 
-Technology: TypeScript (strict), Vite, npm workspaces, Vitest, ESLint, Prettier.
-The UI is plain TypeScript, HTML, and CSS (no UI framework). There are no runtime
-dependencies.
+For Clinical Cards development, run `npx vite` from `clinical-cards/`. Clinical content authoring commands are documented in [clinical-cards/README.md](clinical-cards/README.md).
+
+**Lint status:** Code written during milestones M3–M6 passes linting. The full lint command reports two existing style issues in M2 files:
+
+- `shared-engine/src/issues.ts`: Unused compile-time check type.
+- `shared-engine/src/penalty-draw.ts`: Line-break formatting rule.
+
+Neither issue affects gameplay behavior. Both were left unchanged pending an owner decision.
+
+**Static hosting:** Both applications use relative asset paths, require no server-side application code, and are deployed using Netlify.
+
+**Technology stack:** TypeScript (strict), Vite, npm workspaces, Vitest, ESLint, and Prettier.
+
+The user interface uses plain TypeScript, HTML, and CSS without a UI framework. The applications have no runtime package dependencies.
 
 ## Testing
 
-- **Automated** (Vitest), final M6 run on 2026-11-14: **2390 passed, 0 failed,
-  2 skipped, 6 todo**.
-  - The 2 skipped tests are shipped-data cases that no longer apply (no data
-    files, and a dataset without a review file).
-  - The 6 todo are deliberately deferred M2 placeholders: 4 for engine judging,
-    now tested in the M3 suites, whose conversion awaits an owner decision; 2
-    for a future shared data loader.
-  - The TypeScript build, test type-check and both Vite builds pass.
-- **Owner-observed in Chrome (Math, M5):**
-  - full Solitaire sessions;
-  - a full Player vs. Beepy match with all four Accept/Challenge outcomes;
-  - drag-and-drop and keyboard-only play;
-  - layouts at 375–1280 px;
-  - simulated touch.
-- **Owner-observed in Chrome (Clinical, M6):**
-  - Solitaire and Player vs. Beepy in both question styles, including a full
-    match;
-  - drag-and-drop onto challenges and Discard;
-  - keyboard-only play;
-  - widths 1440, 1024, 768, 390 and 320 px;
-  - touch via Chrome device emulation;
-  - Windows Narrator.
+**Final automated verification — November 14, 2026**
 
-Details, test names, and every issue found are in
-[`docs/kiro-development-log.md`](docs/kiro-development-log.md).
+- **2,390 tests passed**
+- **0 tests failed**
+- **2 tests skipped**
+- **6 tests marked todo**
 
-## Known limitations
+The two skipped tests concern shipped-data cases that no longer apply.
 
-- Tutor Mode, Player vs. Player, progress saving and educational rewards are not
-  implemented.
-- Neither app has been tested on a physical touchscreen device. Clinical was
-  tested with Windows Narrator only; Math had no full screen-reader test. There
-  has been no comprehensive accessibility audit.
-- The Clinical dataset has no explanations yet, so Explain Why has been tested
-  only with fictional data.
-- These are client-side apps, so game state can be inspected with browser
-  developer tools. It is hidden from the normal interface, not secret. The
-  Clinical bundle includes the review file, with the reviewer's name and dates.
-- Not yet deployed.
+The six todo items are deferred M2 placeholders: four relate to judging behavior already covered by later M3 suites, and two concern a potential future shared data loader.
 
-## Roadmap (documented, not implemented)
+The TypeScript build, test type-checking, and both Vite builds passed.
 
-1. **Tutor Mode:** a human tutor evaluates a student's proposed move before the
-   engine resolves it, with tutor accuracy tracked separately.
-2. **Teaching Edition (Clinical, post-hackathon):** a single-disease,
-   four-category Solitaire redesign.
-3. **Educational rewards:** recognize correct answers and the player who solves
-   more challenges, separately from the unchanged win rule.
+**Math Cards — owner-observed testing in Chrome (M5):**
 
-## License and acknowledgements
+- Complete Solitaire sessions
+- Complete Player vs. Beepy match
+- All four Accept/Challenge outcomes
+- Drag-and-drop and keyboard-only gameplay
+- Responsive layouts from 375 to 1280 pixels
+- Simulated touch interaction
 
-Released under the [MIT License](LICENSE).
+**Clinical Cards — owner-observed testing in Chrome (M6):**
 
-Inspired by an earlier (2018) Beepy project
-([video](https://youtu.be/qOLjLOyOygM)). All code and artwork here are new work
-created for Kiroween 2026. Nothing from the 2018 project, including its video or
-artwork, is reused, and no ownership of it is claimed. The clinical content was
-written and reviewed by the project owner, not generated by AI.
+- Solitaire and Player vs. Beepy in both question styles
+- Complete competitive match
+- Drag-and-drop onto challenges and Discard
+- Keyboard-only gameplay
+- Responsive widths of 1440, 1024, 768, 390, and 320 pixels
+- Touch interaction through Chrome device emulation
+- Windows Narrator testing
+
+Testing details, issue histories, and resolutions are documented in the [Kiro development log](docs/kiro-development-log.md).
+
+Both deployed applications were also opened and tested in Chrome following deployment.
+
+## Known Limitations
+
+- Tutor Mode, Player vs. Player, persistent progress saving, and educational rewards are not implemented.
+- Neither application has been tested on a physical touchscreen device.
+- Clinical Cards was tested with Windows Narrator, but Math Cards has not received a complete screen-reader test. No comprehensive accessibility audit has been performed.
+- The current Clinical Cards dataset does not include explanations. Explain Why has been tested only with fictional data.
+- Both applications are client-side software. Although answer keys are not exposed through the normal game interface, underlying game state can be inspected using browser developer tools.
+- The Clinical Cards bundle includes the physician review file, including the reviewer's name and review dates.
+
+## Future Development (Not Implemented)
+
+Potential enhancements include:
+
+1. **Tutor Mode:** A human tutor evaluates proposed moves before the engine resolves them, with tutor accuracy tracked separately.
+2. **Clinical Cards Teaching Edition:** A single-disease, four-category Solitaire redesign emphasizing focused clinical review.
+3. **Additional educational content:** More mathematics operations and additional clinical subjects.
+4. **Educational rewards:** Recognition of correct answers and challenge-solving performance without changing the established game win conditions.
+5. **Player vs. Player:** A possible competitive mode allowing two human players to use the shared engine.
+
+These features are proposals for future development, not part of the completed Kiroween 2026 submission. Their implementation depends on available resources and opportunities.
+
+## License and Acknowledgements
+
+This project is released under the [MIT License](LICENSE).
+
+Beepy Card Engine was conceived, designed, and directed by its individual project owner, who also authored and reviewed the clinical educational content. Kiro assisted with software implementation, debugging, and testing.
+
+The project was inspired by an earlier Beepy educational game concept submitted to Devpost in 2018:
+
+[Beepy's Addition Bots — earlier project video](https://youtu.be/qOLjLOyOygM)
+
+The earlier project served as conceptual inspiration only. No application code, game-engine code, video, or artwork from the 2018 project was reused.
+
+The code and artwork in this repository were created for the Kiroween 2026 project. The clinical educational content was authored and reviewed by the project owner, not generated by AI.
+
+**Kiroween 2026 — Skeleton Crew submission**
+
+Demonstration video: https://youtu.be/3QzE9GrPU84
